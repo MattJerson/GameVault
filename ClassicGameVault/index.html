@@ -105,21 +105,27 @@
       <img src="Images/Contact.png" alt="Contact Image" />
       <div class="form">
         <h1>Contact Me</h1>
-        <div class="inputBx">
-          <p>Enter Name</p>
-          <input type="text" placeholder="Full Name" />
-        </div>
-        <div class="inputBx">
-          <p>Enter Email</p>
-          <input type="text" placeholder="Email" />
-        </div>
-        <div class="inputBx">
-          <p>Message</p>
-          <textarea placeholder="Message Here"></textarea>
-        </div>
-        <div class="inputBx">
-          <input type="submit" name="Submit" />
-        </div>
+        <form id="contactForm">
+          <div class="inputBx">
+            <p>Enter Name</p>
+            <input type="text" id="name" placeholder="Full Name" />
+          </div>
+          <div class="inputBx">
+            <p>Enter Email</p>
+            <input type="text" id="user_email" placeholder="Email" />
+          </div>
+          <div class="inputBx">
+            <p>Subject</p>
+            <input type="text" id="subject" placeholder="Subject" />
+          </div>
+          <div class="inputBx">
+            <p>Message</p>
+            <textarea id="message" placeholder="Message Here"></textarea>
+          </div>
+          <div class="inputBx">
+            <input type="button" value="Submit" onclick="sendMessage();" />
+          </div>
+        </form>
       </div>
     </div>
     <footer>
