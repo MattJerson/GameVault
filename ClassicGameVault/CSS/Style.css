@@ -364,7 +364,7 @@ header ul li a:hover {
   height: 150px;
 }
 
-.contact .form .inputBx input[type="submit"] {
+.contact .form .inputBx input[type="button"] {
   color: #fff;
   width: 150px;
   outline: none;
@@ -380,7 +380,7 @@ header ul li a:hover {
   border: 1px solid #1aeeef;
 }
 
-.contact .form .inputBx input[type="submit"]:hover {
+.contact .form .inputBx input[type="button"]:hover {
   border: none;
   color: #050e2d;
   background: #1aeeef;
