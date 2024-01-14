@@ -37,7 +37,7 @@ function sendMessage() {
 
   // Simple form validation
   if (!name || !userEmail || !subject || !message) {
-    alert("Please fill out all the fields before sending the message.");
+    alert("Complete The Required Forms.");
     return;
   }
 
@@ -57,7 +57,7 @@ function sendMessage() {
       alert("Message Sent Successfully!");
     })
     .catch(function (error) {
-      console.error("Email sending failed", error);
-      alert("Email sending failed. Please try again later.");
+      console.error("Email Sending Failed", error);
+      alert("Email Sending Failed. Please Try Again Later.");
     });
 }
