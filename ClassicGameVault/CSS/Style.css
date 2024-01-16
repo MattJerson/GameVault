@@ -158,6 +158,7 @@ header ul li a:hover {
 .banner .bg .content p {
   font-size: 1em;
   color: #dbd9d9;
+  text-align: justify;
   letter-spacing: 1px;
 }
 
