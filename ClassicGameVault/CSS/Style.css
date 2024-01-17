@@ -526,3 +526,101 @@ footer .info ul li:hover a i {
     flex-direction: column;
   }
 }
+
+@media (max-width: 576px) {
+  body {
+    padding: 0 10px;
+  }
+  header {
+    padding: 15px 20px;
+  }
+  header .logo {
+    font-size: 1.5em;
+  }
+  header .nav {
+    padding-top: 20px;
+  }
+  header ul li {
+    margin: 10px 0;
+  }
+  header ul li a {
+    padding: 10px 15px;
+  }
+  .banner {
+    padding: 10px;
+  }
+  .banner .bg .content {
+    width: 100%;
+    padding: 30px;
+  }
+  .banner .bg img {
+    display: none;
+  }
+  .banner .bg .content h2 {
+    font-size: 2em;
+  }
+  .about {
+    padding: 10px;
+  }
+  .about img {
+    display: none;
+  }
+  .about .contentBx {
+    width: 100%;
+  }
+  .about .contentBx h2 {
+    font-size: 2em;
+  }
+  .games {
+    padding: 10px;
+  }
+  .games h2{
+    text-align: center;
+  }
+  .games .cardBx .card {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .games .cardBx .card img {
+    height: 200px;
+  }
+  .games .cardBx .card .info a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .contact {
+    padding: 10px;
+  }
+  .contact img {
+    display: none;
+  }
+  .contact .form {
+    margin: 15px;
+  }
+  .contact .form h1 {
+    font-size: 1.5em;
+  }
+  .contact .form .inputBx input,
+  .contact .form .inputBx textarea {
+    font-size: 16px;
+  }
+  .contact .form .inputBx input[type="submit"] {
+    width: 100%;
+  }
+  footer .info {
+    padding: 10px 0;
+  }
+  footer .info .logo {
+    font-size: 1.5em;
+  }
+  footer .info p {
+    font-size: 14px;
+  }
+  footer .info ul li {
+    width: 40px;
+    height: 40px;
+  }
+  footer .info ul li a i {
+    font-size: 1.5em;
+  }
+}
