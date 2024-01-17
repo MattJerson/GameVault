@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  user-select: none;
+  transition: 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  padding-top: 5vh;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  background-image: radial-gradient(
+      circle at 19% 90%,
+      rgba(190, 190, 190, 0.04) 0%,
+      rgba(190, 190, 190, 0.04) 17%,
+      transparent 17%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 73% 2%,
+      rgba(78, 78, 78, 0.04) 0%,
+      rgba(78, 78, 78, 0.04) 94%,
+      transparent 94%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 45% 2%,
+      rgba(18, 18, 18, 0.04) 0%,
+      rgba(18, 18, 18, 0.04) 55%,
+      transparent 55%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 76% 60%,
+      rgba(110, 110, 110, 0.04) 0%,
+      rgba(110, 110, 110, 0.04) 34%,
+      transparent 34%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 68% 56%,
+      rgba(246, 246, 246, 0.04) 0%,
+      rgba(246, 246, 246, 0.04) 16%,
+      transparent 16%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 71% 42%,
+      rgba(156, 156, 156, 0.04) 0%,
+      rgba(156, 156, 156, 0.04) 47%,
+      transparent 47%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 46% 82%,
+      rgba(247, 247, 247, 0.04) 0%,
+      rgba(247, 247, 247, 0.04) 39%,
+      transparent 39%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 50% 47%,
+      rgba(209, 209, 209, 0.04) 0%,
+      rgba(209, 209, 209, 0.04) 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    linear-gradient(360deg, rgb(27, 33, 65), rgb(5, 14, 45));
+}
+
+h1 {
+  color: #fff;
+  font-size: 3em;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  transition: 0.5s;
+  padding: 7px 100px;
+  background: #1b2141;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.turn-container {
+  width: 170px;
+  height: 80px;
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.turn-container h3 {
+  margin: 0;
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
+
+.turn-container .turn-box {
+  font-weight: 700;
+  font-size: 1.6rem;
+  border: 3px solid #000;
+}
+
+.turn-container .turn-box:nth-child(even) {
+  border-right: none;
+}
+
+.bg {
+  left: 0;
+  bottom: 0;
+  width: 85px;
+  z-index: -1;
+  height: 42px;
+  position: absolute;
+  background-color: #ff2e63;
+}
+
+.main-grid {
+  width: 250px;
+  display: grid;
+  height: 250px;
+  margin-top: 10px;
+  margin: 30px auto;
+  border: 2px solid #000;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 2px solid #000;
+}
+
+.box:hover {
+  background-color: #ff2e63;
+}
+
+#play-again {
+    color: #fff;
+    border: none;
+    display: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 10px 25px;
+    background-color: #ff2e63;
+}
+
+#play-again:hover {
+    color: #000;
+    padding: 10px 40px;
+    background-color: #08d9d6;
+}
