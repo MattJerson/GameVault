@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(
+      circle at 19% 90%,
+      rgba(190, 190, 190, 0.04) 0%,
+      rgba(190, 190, 190, 0.04) 17%,
+      transparent 17%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 73% 2%,
+      rgba(78, 78, 78, 0.04) 0%,
+      rgba(78, 78, 78, 0.04) 94%,
+      transparent 94%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 45% 2%,
+      rgba(18, 18, 18, 0.04) 0%,
+      rgba(18, 18, 18, 0.04) 55%,
+      transparent 55%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 76% 60%,
+      rgba(110, 110, 110, 0.04) 0%,
+      rgba(110, 110, 110, 0.04) 34%,
+      transparent 34%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 68% 56%,
+      rgba(246, 246, 246, 0.04) 0%,
+      rgba(246, 246, 246, 0.04) 16%,
+      transparent 16%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 71% 42%,
+      rgba(156, 156, 156, 0.04) 0%,
+      rgba(156, 156, 156, 0.04) 47%,
+      transparent 47%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 46% 82%,
+      rgba(247, 247, 247, 0.04) 0%,
+      rgba(247, 247, 247, 0.04) 39%,
+      transparent 39%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 50% 47%,
+      rgba(209, 209, 209, 0.04) 0%,
+      rgba(209, 209, 209, 0.04) 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    linear-gradient(360deg, rgb(27, 33, 65), rgb(5, 14, 45));
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  transition: 0.5s;
+  padding: 7px 100px;
+  align-items: center;
+  background: #1b2141;
+  justify-content: space-between;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+}
+
+.container {
+  gap: 70px;
+  width: 850px;
+  display: flex;
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  align-items: flex-end;
+}
+
+.hangman-box img {
+  max-width: 270px;
+}
+
+.hangman-box h1 {
+  margin-top: 20px;
+  font-size: 1.45rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.word-display {
+  gap: 10px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-display .letter {
+  width: 28px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #000;
+}
+
+.word-display .letter.guessed {
+  margin: -40px 0 35px;
+  border-color: transparent;
+}
+
+.game-box h4 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.game-box h4 b {
+  font-weight: 600;
+}
+
+.game-box .guess-text b {
+  color: #ff0000;
+}
+
+.game-box .keyboard {
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+:where(.game-modal, .keyboard) button {
+  color: #fff;
+  padding: 7px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  background: #5e63ba;
+  text-transform: uppercase;
+}
+
+.keyboard button {
+  padding: 7px;
+  width: calc(100% / 9 - 5px);
+}
+
+.keyboard button[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+:where(.game-modal, .keyboard) button:hover {
+  background: #8286c9;
+}
+
+.game-modal {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  padding: 0 10px;
+  position: fixed;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  transition: opacity 0.4s ease;
+}
+
+.game-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.game-modal .content {
+  width: 100%;
+  padding: 30px;
+  max-width: 420px;
+  background: #fff;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.game-modal img {
+  max-width: 130px;
+  margin-bottom: 20px;
+}
+
+.game-modal h4 {
+  font-size: 1.53rem;
+}
+
+.game-modal p {
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin: 15px 0 30px;
+}
+
+.game-modal p b {
+  color: #5e63ba;
+  font-weight: 600;
+}
+
+.game-modal button {
+  padding: 12px 23px;
+}
+
+@media (max-width: 782px) {
+  .container {
+    padding: 30px 15px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hangman-box img {
+    max-width: 200px;
+  }
+  .hangman-box h1 {
+    display: none;
+  }
+}
