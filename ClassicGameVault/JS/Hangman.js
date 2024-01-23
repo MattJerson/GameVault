@@ -34,7 +34,7 @@ const gameOver = (isVictory) => {
       ? `YOU FOUND THE WORD:`
       : `THE CORRECT WORD WAS:`;
     gameModal.querySelector("img").src = `/Images/${
-      isVictory ? "VICTORY" : "LOST"
+      isVictory ? "Victory" : "Lost"
     }.gif`;
     gameModal.querySelector("h4").innerText = `${
       isVictory ? "CONGRATS!" : "GAME OVER!"
