@@ -1,6 +1,6 @@
-# GameVault
+#Classic GameVault
 
-# A New Home For Classical Games
+## A New Home For Classical Games
 
 Welcome to my repository!
 
