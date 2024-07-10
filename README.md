@@ -1,4 +1,4 @@
-#Classic GameVault
+# Classic GameVault
 
 ## A New Home For Classical Games
 
